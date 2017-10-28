@@ -78,5 +78,15 @@ RUN apt-get install -y curl grep sed dpkg && \
 
 ENV PATH /opt/conda/bin:$PATH
 
-ENTRYPOINT [ "/usr/bin/tini", "--" ]
-CMD [ "/bin/bash" ]
+# ENTRYPOINT [ "/usr/bin/tini", "--" ]
+# CMD [ "/bin/bash" ]
+
+# ================================================================
+# refer https://www.youtube.com/watch?v=AYZCpxYVxH4&t=729s
+
+RUN pip install https://dist.apache.org/repos/dist/dev/incubator/toree/0.2.0/snapshots/dev1/toree-pip/toree-0.2.0.dev1.tar.gz && \
+   jupyter toree install --spark_home=$SPARK_HOME --interpreters=Scala,PySpark,SQL --user
+
+EXPOSE 8082
+
+CMD [ "jupyter-notebook", "--no-browser", "--ip=0.0.0.0", "--port=8082", "--allow-root", "--NotebookApp.token='123456'" ]
