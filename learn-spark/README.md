@@ -1,6 +1,14 @@
 
 # learn-spark
 
+Perform the following docker pull
+```
+sudo docker pull bicepjai/learn-spark:initial_tag
+```
+
+## DockerFile Info
+
+
 combination of some docker files to set up learning platform for spark
 
 The docker files used are
