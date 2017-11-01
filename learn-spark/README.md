@@ -3,11 +3,15 @@
 
 Perform the following docker pull
 ```
-sudo docker pull bicepjai/learn-spark:initial_tag
+sudo docker pull bicepjai/learn-spark:latest
 ```
 
 ## DockerFile Info
 
+OS details
+```
+Linux 8f6fd63bbfc8 4.10.0-37-generic #41~16.04.1-Ubuntu SMP Fri Oct 6 22:42:59 UTC 2017 x86_64 GNU/Linux
+```
 
 combination of some docker files to set up learning platform for spark
 
