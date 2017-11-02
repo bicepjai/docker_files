@@ -39,3 +39,5 @@ Command to open up new shells
 ```
 sudo docker exec -it <running-container-id> bash
 ```
+
+the password for the jupyter notebook is `123456`
